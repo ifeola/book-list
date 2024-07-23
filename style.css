@@ -1,0 +1,150 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans", sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  min-height: 100vh;
+  width: 100%;
+  background-color: #000;
+  color: #fff;
+  font-size: 1.6rem;
+}
+
+.container {
+  width: 100%;
+  max-width: 480px;
+  margin-inline: auto;
+  margin-block-start: 5.6rem;
+}
+
+.title {
+  font-size: 2.4rem;
+  text-align: center;
+  margin-bottom: 3.2rem;
+}
+
+#book-form {
+  width: 100%;
+  display: grid;
+  gap: 0.8rem;
+  margin-block-end: 4rem;
+}
+
+.form__group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.form__control,
+.form__btn {
+  padding-inline: 2.4rem;
+  padding-block: 0.8rem;
+  background-color: transparent;
+  border-radius: 100vw;
+}
+
+.form__control {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  outline: none;
+  background-color: hsla(0, 0%, 16%, 0.459);
+  width: 100%;
+  color: #fff;
+  font-size: 1.4rem;
+}
+
+.form__control::placeholder {
+  letter-spacing: 2px;
+  font-weight: 600;
+}
+
+.form__btn {
+  border: none;
+  color: #fff;
+  background-color: #0083a3;
+  font-size: 1.4rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  cursor: pointer;
+  letter-spacing: 4px;
+}
+
+#book-table {
+  width: 100%;
+}
+
+#book-table,
+tr,
+th,
+td {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-collapse: collapse;
+  padding-block: 0.8rem;
+  padding-inline: 0.8rem;
+}
+
+thead th {
+  background-color: hsla(0, 0%, 16%, 0.459);
+  text-align: left;
+}
+
+thead th:first-child {
+  width: 32%;
+}
+
+tr:nth-child(even) {
+  background-color: hsla(0, 0%, 16%, 0.459);
+}
+
+.book-delete {
+  text-align: center;
+}
+
+.delete__btn {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+
+  svg {
+    width: 16px;
+    height: 16px;
+    fill: aliceblue;
+  }
+}
+
+.alert {
+  width: fit-content;
+  background-color: #ffffff;
+  color: #0083a3;
+  padding: 1.6rem 3.2rem;
+  font-size: 1.6rem;
+  font-weight: 600;
+  position: absolute;
+  bottom: -100%;
+  left: 50%;
+  transform: translate(-50%);
+  transition: bottom 400ms ease;
+}
+
+.alert.active {
+  bottom: 40%;
+}
+
+.alert.sucess {
+  color: #0083a3;
+  border-bottom: 4px solid #0083a3;
+}
+
+.alert.failure {
+  color: #a30000;
+  border-bottom: 4px solid #a30000;
+}
